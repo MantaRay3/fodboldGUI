@@ -10,9 +10,19 @@ class listWindowClass:
         self.listWindow.title("List Window")
         self.listWindow.geometry("500x500")
 
-        Label(self.listWindow, text="Liste over indbetalinger.. eller.. noget der ligner en cylinder").pack()
+        Label(self.listWindow, text="Liste over indbetalinger").pack()
 
-        img = ImageTk.PhotoImage(Image.open("assets/img/cyl.png"))
-        panel = Label(self.listWindow, image=img)
-        panel.image = img
-        panel.pack(side="bottom", fill="both", expand="yes")
+#        img = ImageTk.PhotoImage(Image.open("assets/img/cyl.png"))
+#        panel = Label(self.listWindow, image=img)
+#        panel.image = img
+#        panel.pack(side="bottom", fill="both", expand="yes")
+
+        #TODONE: show list in table
+        #TODO: Get it into the list window
+        debt=self.master.target
+        for key, value in self.master.fodboldtur.items():
+            if value == debt:
+                print(f'{key} har betalt det hele')
+            else:
+                print(f' {key} har betalt {value} og mangler {debt - value}')
+
