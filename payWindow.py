@@ -13,7 +13,7 @@ class payWindowClass:
         Label(self.payWindow,
               text="Indbetal").pack()
 
-        #TODO Show
+        #TODO try and make a drop down menu where you select who needs to pay
 
         self.money = Entry(self.payWindow)
         self.money.pack()
